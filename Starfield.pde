@@ -1,15 +1,32 @@
-//your code here
+NormalParticle [] lines
 void setup()
 {
-	//your code here
+	size(700,700);
+  	background(0);
+  	lines = new	NormalParticle[100];	
+  	for(int = 0; i<lines.length; i++)
+  		lines[i] = new NormalParticle();
+
 }
-void draw()
+void draw()	
 {
-	//your code here
+	for(int=i; i<lines.length; i++){
+		lines[i].move();
+		lines[i].show();
+	}
 }
 class NormalParticle
 {
-	//your code here
+	int x, y;
+	NormalParticle(){
+		x=myX;
+		y=myY;
+	}
+	void show(){
+
+		ellipse((int)Math.random()*700)
+	}
+
 }
 interface Particle
 {
