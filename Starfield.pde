@@ -1,31 +1,32 @@
-NormalParticle [] lines
+NormalParticle [] lines;
 void setup()
 {
 	size(700,700);
-  	background(0);
   	lines = new	NormalParticle[100];	
-  	for(int = 0; i<lines.length; i++)
+  	for(int i = 0; i<lines.length; i++)
   		lines[i] = new NormalParticle();
 
 }
 void draw()	
+
 {
-	for(int=i; i<lines.length; i++){
-		lines[i].move();
+	 background(0);
+	for(int i =0; i<lines.length; i++){
 		lines[i].show();
 	}
 }
-class NormalParticle
+class NormalParticle	
 {
-	int x, y;
+	int myX, myY;
 	NormalParticle(){
-		x=myX;
-		y=myY;
+		int myX = (int)(Math.random()*700);
+		int myY = (int)(Math.random()*700);
 	}
 	void show(){
-
-		ellipse((int)Math.random()*700)
+		fill(255,255,255);
+		ellipse(myX,myY,10,10);
 	}
+ 
 
 }
 interface Particle
