@@ -28,7 +28,7 @@ class NormalParticle
 		myY = (int)(Math.random()*700)-350;
 		speed=((Math.random())*10+1);
 		angle=(Math.random()*Math.PI*2);
-		if (myX >0 && myY>0){
+		/*if (myX >0 && myY>0){
 			angle=(Math.random()*Math.PI*1/2);
 		}
 		if (myX <0 && myY>0){
@@ -39,16 +39,15 @@ class NormalParticle
 		}
 		if (myX >0 && myY<0){
 			angle=(Math.random()*Math.PI*1/2)+(Math.PI)*3/2;
-		}
+		}*/
 	}
 	void move(){	
 	x= x+Math.cos(angle)*speed;
 	y= y+Math.sin(angle)*speed;
-	if (x>width || x<0){
-		x=myX;
-	}
-	if (y>height|| y<0){
-		y=myY;
+	if (myX>width || myX<0 || myY>height|| myY<0){
+		myX=0;
+		myY=0;
+
 	}
 }
 	void show(){
