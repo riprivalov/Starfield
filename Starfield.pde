@@ -19,9 +19,11 @@ void draw()
 	for(int i =0; i<lines.length; i++){
 		lines[i].show();
 	}
-	if(mousePressed){
-		for(int i =0; i<lines.length; i++){
+	if(mousePressed){}
+		if (0==0){
+			for(int i =0; i<lines.length; i++){
 			lines[i].move();
+			
 		}
 	}
 }
@@ -32,7 +34,7 @@ class NormalParticle implements Particle
 	NormalParticle(){
 		myX = (int)(Math.random()*700)-350;
 		myY = (int)(Math.random()*700)-350;
-		speed=((Math.random())*10+1);
+		speed=((Math.random())*4+1);
 		angle=(Math.random()*Math.PI);
 		if (myX >0 && myY>0){
 			angle=(Math.random()*Math.PI*1/2);
